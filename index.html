@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+  }
+  
+  .box {
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    border: 1px solid black;
+    cursor: pointer;
+  }
+  
+  .box:hover {
+    background-color: lightgray;
+  }
+  
+  .selected {
+    background-color: red;
+  }
+</style>
+</head>
+<body>
+  <div class="box" id="box1"></div>
+  <div class="box" id="box2"></div>
+  <div class="box" id="box3"></div>
+  <div class="box" id="box4"></div>
+  <div class="box" id="box5"></div>
+  <div class="box" id="box6"></div>
+  <div class="box" id="box7"></div>
+  <div class="box" id="box8"></div>
+  <div class="box" id="box9"></div>
+  <div class="box" id="box10"></div>
+  <div class="box" id="box11"></div>
+  <div class="box" id="box12"></div>
+  <div class="box" id="box13"></div>
+  <div class="box" id="box14"></div>
+  <div class="box" id="box15"></div>
+  <div class="box" id="box16"></div>
+</body>
+</html>
+<script>
+const boxes = document.querySelectorAll('.box');
+
+boxes.forEach((box) => {
+  box.addEventListener('click', () => {
+    box.classList.toggle('selected');
+  });
+});
+</script>
